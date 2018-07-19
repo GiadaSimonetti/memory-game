@@ -1,4 +1,4 @@
-# memory-game
+# JavaScript Memory Game
 
 Fun and simple Adventure Time memory game made with plain JavaScript.
 
@@ -16,3 +16,7 @@ Fun and simple Adventure Time memory game made with plain JavaScript.
 - Add delay to selections.
 - Show back of card initially and flip on select
 - Finished game!
+
+![memory game](./img/screenshots/1.png?raw=true)
+![memory game](./img/screenshots/2.png?raw=true)
+![memory game](./img/screenshots/3.png?raw=true)
