@@ -110,7 +110,13 @@ grid.addEventListener('click', function (event) {
   let clicked = event.target;
 
   // Do not allow the grid section itself to be selected; only select divs inside the grid
-  if (clicked.nodeName === 'SECTION' || clicked === previousTarget) { return; }
+  if (
+  clicked.nodeName === 'SECTION' ||
+  clicked === previousTarget ||
+  clicked.parentNode.classList.contains('selected')
+) {
+  return;
+}
 
   // Add selected class
   if (count < 2) {

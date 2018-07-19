@@ -40,7 +40,6 @@ body {
 
 .front {
   background: black url('../img/adventure_time_logo.png') no-repeat center center / contain;
-  border: 3px solid #992121;
 }
 
 .back {
@@ -57,4 +56,13 @@ body {
 
 .match .front {
   background: #54C8EB !important;
+}
+
+.btn-reset {
+  margin-right: 10px;
+  background: black;
+  color: #E41018;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: fantasy;
 }
