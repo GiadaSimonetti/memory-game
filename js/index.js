@@ -87,13 +87,15 @@ gameGrid.forEach(item => {
 let count = 0;
 let firstGuess = '';
 let secondGuess = '';
+let previousTarget = null;
+
 // Add event listener to grid
 grid.addEventListener('click', function (event) {
   // The event target is our clicked item
   let clicked = event.target;
 
   // Do not allow the grid section itself to be selected; only select divs inside the grid
-  if (clicked.nodeName === 'SECTION') { return; }
+  if (clicked.nodeName === 'SECTION' || clicked === previousTarget) { return; }
 
   // Add selected class
   if (count < 2) {
@@ -115,6 +117,8 @@ grid.addEventListener('click', function (event) {
           match();
         }
       }
+      // Set previous target to clicked
+      previousTarget = clicked;
     }
  });
 
