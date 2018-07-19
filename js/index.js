@@ -84,10 +84,11 @@ gameGrid.forEach(item => {
   grid.appendChild(card);
 });
 
+let count = 0;
+let firstGuess = '';
+let secondGuess = '';
 let previousTarget = null;
-firstGuess = '';
-secondGuess = '';
-count = 0;
+let delay = 1200;
 
 const resetGuesses = () => {
   firstGuess = '';
@@ -124,10 +125,10 @@ grid.addEventListener('click', function (event) {
         // and the first guess matches the second match...
         if (firstGuess === secondGuess) {
           // run the match function
-          match();
-          resetGuesses();
+          setTimeout(match, delay);
+          setTimeout(resetGuesses, delay);
         } else {
-          resetGuesses();
+          setTimeout(resetGuesses, delay);
         }
       }
       // Set previous target to clicked
