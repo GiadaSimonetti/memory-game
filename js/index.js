@@ -37,7 +37,7 @@ const cardsArray = [{
   },
   {
     'name': 'p-bubblegum',
-    'img': 'img/p-bubblegum.png',
+    'img': 'img/p-bubblegum2.png',
   },
   {
     'name': 'peppermint-butler',
