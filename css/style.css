@@ -7,7 +7,7 @@
 body {
   margin: 20px 0;
   /* background: #6589F9; */
-  background: #42eef4;
+  background: #34d84f;
 }
 
 .grid {
@@ -20,7 +20,7 @@ body {
 
 .card {
   margin: 5px;
-  background-color: #6589F9;
+  background-color: #34d84f;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
