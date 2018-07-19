@@ -84,11 +84,21 @@ gameGrid.forEach(item => {
   grid.appendChild(card);
 });
 
-let count = 0;
-let firstGuess = '';
-let secondGuess = '';
 let previousTarget = null;
+firstGuess = '';
+secondGuess = '';
+count = 0;
 
+const resetGuesses = () => {
+  firstGuess = '';
+  secondGuess = '';
+  count = 0;
+
+  var selected = document.querySelectorAll('.selected');
+  selected.forEach(card => {
+    card.classList.remove('selected');
+  });
+};
 // Add event listener to grid
 grid.addEventListener('click', function (event) {
   // The event target is our clicked item
@@ -115,6 +125,9 @@ grid.addEventListener('click', function (event) {
         if (firstGuess === secondGuess) {
           // run the match function
           match();
+          resetGuesses();
+        } else {
+          resetGuesses();
         }
       }
       // Set previous target to clicked
