@@ -84,6 +84,7 @@ gameGrid.forEach(item => {
   grid.appendChild(card);
 });
 
+let count = 0;
 // Add event listener to grid
 grid.addEventListener('click', function (event) {
   // The event target is our clicked item
@@ -93,5 +94,9 @@ grid.addEventListener('click', function (event) {
   if (clicked.nodeName === 'SECTION') { return; }
 
   // Add selected class
-  clicked.classList.add('selected');
+  if (count < 2) {
+    count++;
+    // Add selected class
+    clicked.classList.add('selected');
+  }
  });
