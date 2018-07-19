@@ -63,6 +63,9 @@ grid.setAttribute('class', 'grid');
 // Append the grid section to the game div
 game.appendChild(grid);
 
+// Randomize game grid on each load
+gameGrid.sort(() => 0.5 - Math.random());
+
 // For each item in the cardsArray array...
 gameGrid.forEach(item => {
   // Create a div
