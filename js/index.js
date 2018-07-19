@@ -85,6 +85,8 @@ gameGrid.forEach(item => {
 });
 
 let count = 0;
+let firstGuess = '';
+let secondGuess = '';
 // Add event listener to grid
 grid.addEventListener('click', function (event) {
   // The event target is our clicked item
@@ -95,8 +97,31 @@ grid.addEventListener('click', function (event) {
 
   // Add selected class
   if (count < 2) {
-    count++;
-    // Add selected class
-    clicked.classList.add('selected');
-  }
+      count++;
+      if (count === 1) {
+        // Assign first guess
+        firstGuess = clicked.dataset.name;
+        clicked.classList.add('selected');
+      } else {
+        // Assign second guess
+        secondGuess = clicked.dataset.name;
+        clicked.classList.add('selected');
+      }
+      // If both guesses are not empty...
+      if (firstGuess !== '' && secondGuess !== '') {
+        // and the first guess matches the second match...
+        if (firstGuess === secondGuess) {
+          // run the match function
+          match();
+        }
+      }
+    }
  });
+
+ // Add match CSS
+const match = () => {
+  var selected = document.querySelectorAll('.selected');
+  selected.forEach(card => {
+    card.classList.add('match');
+  });
+}
